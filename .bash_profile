@@ -3,6 +3,11 @@
 
 export BASH_SILENCE_DEPRECATION_WARNING = 1
 
+# clear terminal
+c(){
+	clear "$@"
+}
+
 # open curr dir in finder
 f(){
 	open -a Finder ./ "$@"
