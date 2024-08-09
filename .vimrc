@@ -1,5 +1,4 @@
 imap jj <Esc>
-
 set visualbell
 set number
 set ruler 

@@ -1,27 +1,25 @@
-
-
-
-export BASH_SILENCE_DEPRECATION_WARNING = 1
+export BASH_SILENCE_DEPRECATION_WARNING=1
 
 # clear terminal
-c(){
+function c(){
 	clear "$@"
 }
 
+
 # open curr dir in finder
-f(){
+function f(){
 	open -a Finder ./ "$@"
 }
 
 # git add, commit, push one liner
-getlazy(){
+function gitlazy(){
 	git add .
 	git commit -a -m "$1"
 	git push 
 }
 
 # git add, and commit one liner
-getsave(){
+function gitsave(){
 	git add . 
 	git commit -m "$1"
 }
