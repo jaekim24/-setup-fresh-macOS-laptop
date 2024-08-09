@@ -1,5 +1,11 @@
 export BASH_SILENCE_DEPRECATION_WARNING=1
 
+# battery stat
+function bat(){
+	pmset -g batt
+}
+
+
 # clear terminal
 function c(){
 	clear "$@"
@@ -24,3 +30,4 @@ function gitsave(){
 	git commit -m "$1"
 }
 
+export PATH=/opt/homebrew/bin:$PATH'
