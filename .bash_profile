@@ -30,4 +30,4 @@ function gitsave(){
 	git commit -m "$1"
 }
 
-export PATH=/opt/homebrew/bin:$PATH'
+export PATH=/opt/homebrew/bin:$PATH

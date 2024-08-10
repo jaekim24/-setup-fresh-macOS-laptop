@@ -15,12 +15,13 @@ cp init.lua ~/.hammerspoon/init.lua
 
 brew install --cask --appdir="/Applications" visual-studio-code
 brew install --cask --appdir="/Applications" brave-browser@beta 
+brew install --cask --appdir="/Applications" menumeters
 
 # show hidden files in finder
 defaults write com.apple.finder AppleShowAllFiles YES
 
 # Screenshot location idk if this works
-defaults write com.apple.screencapture location ~/Screenshots
+#defaults write com.apple.screencapture location ~/Screenshots
 
 # git 
 brew install git 
