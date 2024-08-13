@@ -21,7 +21,11 @@ brew install --cask --appdir="/Applications" menumeters
 defaults write com.apple.finder AppleShowAllFiles YES
 
 # Screenshot location idk if this works
-#defaults write com.apple.screencapture location ~/Screenshots
+mkdir ~/Downloads/screenshots
+
+defaults write com.apple.screencapture location ~/Downloads/screenshots
+killall SystemUIServer
+
 
 # git 
 brew install git 
