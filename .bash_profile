@@ -11,6 +11,15 @@ function c(){
 	clear "$@"
 }
 
+# find a file in all directory
+function findf(){
+	find / -iname "$1" 2>/dev/null
+}
+
+# find a folder in all diretories
+function findd(){
+	find / -type d -iname "$1" 2>/dev/null
+}
 
 # open curr dir in finder
 function f(){
