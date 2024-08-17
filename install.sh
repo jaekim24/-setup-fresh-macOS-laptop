@@ -16,7 +16,7 @@ cp init.lua ~/.hammerspoon/init.lua
 brew install --cask --appdir="/Applications" visual-studio-code
 brew install --cask --appdir="/Applications" brave-browser@beta 
 brew install --cask --appdir="/Applications" menumeters
-brew install --cask --appdir="/Applications" arduino-ide
+brew install --cask --appdir="/Applications" arduino-cli
 
 # show hidden files in finder
 defaults write com.apple.finder AppleShowAllFiles YES
