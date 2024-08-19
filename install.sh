@@ -25,6 +25,9 @@ brew install arduino-cli
 # show hidden files in finder
 defaults write com.apple.finder AppleShowAllFiles YES
 
+# enable repeating key while holding
+defaults write -g ApplePressAndHoldEnabled -bool false
+
 # Screenshot location idk if this works
 mkdir ~/Downloads/screenshots
 
