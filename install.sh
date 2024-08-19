@@ -16,6 +16,10 @@ cp init.lua ~/.hammerspoon/init.lua
 brew install --cask --appdir="/Applications" visual-studio-code
 brew install --cask --appdir="/Applications" brave-browser@beta 
 brew install --cask --appdir="/Applications" menumeters
+
+
+softwareupdate --install-rosetta  # need this to run ardunio-cli on apple silicon
+
 brew install arduino-cli
 
 # show hidden files in finder
