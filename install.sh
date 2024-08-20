@@ -16,7 +16,7 @@ cp init.lua ~/.hammerspoon/init.lua
 brew install --cask --appdir="/Applications" visual-studio-code
 brew install --cask --appdir="/Applications" brave-browser@beta 
 brew install --cask --appdir="/Applications" menumeters
-
+brew install --cask --appdir="/Applications" kicad
 
 softwareupdate --install-rosetta  # need this to run ardunio-cli on apple silicon
 
