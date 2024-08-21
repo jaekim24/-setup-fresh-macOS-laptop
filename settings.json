@@ -1,0 +1,10 @@
+{
+    "terminal.integrated.defaultProfile.osx": "bash",
+    "vim.vimrc.enable": true,
+    "files.autoSave" : "afterDelay",
+    "editor.minimap.enabled": false,
+    "editor.wordWrap": "on",
+    "editor.autoClosingBrackets": "never",
+    "arduino.useArduinoCli": true
+
+}
