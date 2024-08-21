@@ -13,7 +13,9 @@ units = {
   maximum       = { x = 0.00, y = 0.00, w = 1.00, h = 1.00 }
 }
 
-mash = { 'alt' }
+--mash = { 'cmd', 'shift', 'alt' }
+mash = {'alt'}
+mash1 = {'cmd' , 'shift'}
 
 hs.hotkey.bind(mash, 'h', function() hs.window.focusedWindow():move(units.left50,     nil, true) end)
 hs.hotkey.bind(mash, 'j', function() hs.window.focusedWindow():move(units.bot50,     nil, true) end)
@@ -28,10 +30,10 @@ hs.hotkey.bind(mash, 'f', function() hs.window.focusedWindow():move(units.maximu
 
 -- keybinds to applications
 hs.grid.setMargins({0, 0})
-hs.hotkey.bind(mash, 'c', function () hs.application.launchOrFocus("Visual Studio Code") end)
-hs.hotkey.bind('ctrl', 't', function () hs.application.launchOrFocus("Terminal") end)
-hs.hotkey.bind('ctrl', 'b', function () hs.application.launchOrFocus("Brave Browser Beta") end)
-hs.hotkey.bind('ctrl', 'f', function () hs.application.launchOrFocus("Finder") end)
+hs.hotkey.bind(mash1 , 'c', function () hs.application.launchOrFocus("Visual Studio Code") end)
+hs.hotkey.bind(mash1 , 't', function () hs.application.launchOrFocus("Terminal") end)
+hs.hotkey.bind(mash1 , 'b', function () hs.application.launchOrFocus("Brave Browser Beta") end)
+hs.hotkey.bind(mash1 , 'f', function () hs.application.launchOrFocus("Finder") end)
 
 
 -- automatically reload configs
