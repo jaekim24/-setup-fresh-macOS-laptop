@@ -1,11 +1,5 @@
 #!/bin/bash
 
-# shell env
-cp .bash_profile ~/.bash_profile
-cp .vimrc ~/.vimrc
-
-source ~/.bash_profile
-
 # homebrew
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
@@ -21,6 +15,14 @@ brew install --cask --appdir="/Applications" kicad
 softwareupdate --install-rosetta  # need this to run ardunio-cli on apple silicon
 
 brew install arduino-cli
+
+
+# shell env
+cp .bash_profile ~/.bash_profile
+cp .vimrc ~/.vimrc
+cp settings.json ~/Library/Application\ Support/Code/User/settings.json
+source ~/.bash_profile
+
 
 # show hidden files in finder
 defaults write com.apple.finder AppleShowAllFiles YES
