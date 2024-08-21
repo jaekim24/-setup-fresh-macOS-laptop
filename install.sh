@@ -11,7 +11,7 @@ brew install --cask --appdir="/Applications" visual-studio-code
 brew install --cask --appdir="/Applications" brave-browser@beta 
 brew install --cask --appdir="/Applications" menumeters
 brew install --cask --appdir="/Applications" kicad
-
+brew install python
 softwareupdate --install-rosetta  # need this to run ardunio-cli on apple silicon
 
 brew install arduino-cli

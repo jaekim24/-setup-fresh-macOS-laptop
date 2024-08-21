@@ -12,10 +12,13 @@ config and download programs onto a fresh macOS laptop
 	7. git 
 		1. git ssh public and private keys 
 	8. homebrew
+	9. python
+
 2. imports settings
 	1. bash_profile
 	2. vimrc
 	3. vs code settings
+
 3. show hidden files on finder
 4. moves screenshots to ~/Downloads/screenshots
 
