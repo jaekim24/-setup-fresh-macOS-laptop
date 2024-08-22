@@ -15,7 +15,7 @@ units = {
 
 --mash = { 'cmd', 'shift', 'alt' }
 mash = {'alt'}
-mash1 = {'cmd' , 'shift'}
+mash1 = {'alt' , 'shift'}
 
 hs.hotkey.bind(mash, 'h', function() hs.window.focusedWindow():move(units.left50,     nil, true) end)
 hs.hotkey.bind(mash, 'j', function() hs.window.focusedWindow():move(units.bot50,     nil, true) end)
