@@ -6,7 +6,7 @@
 
 # non app store applications to application folder
 non_app_store_applications_to_app_folder=(
-	hammerspoon 		# powerful macOS automation tol
+	hammerspoon 		# powerful macOS automation tool
 	visual-studio-code 	# text editor
 	brave-browser@beta 	# browser
 	kicad			# design schematics and pcb boards
@@ -36,6 +36,7 @@ app_store_applications=(
 
 )
 
+# mas can only download app store applications you've downloaded before with your icloud account
 mas install ${app_store_applications[@]} # installing mac app store applications
 
 # shell env
