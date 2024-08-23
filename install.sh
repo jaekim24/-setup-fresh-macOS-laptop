@@ -15,6 +15,7 @@ brew install python
 softwareupdate --install-rosetta  # need this to run ardunio-cli on apple silicon
 
 brew install arduino-cli
+brew install mas # app store downloader only installs apps youve downloaded before with your accoutn
 
 
 # shell env
