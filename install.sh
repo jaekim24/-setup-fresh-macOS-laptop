@@ -4,6 +4,7 @@
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
 
+# brew install --cask --appdir "/Applications"
 # non app store applications to application folder
 non_app_store_applications_to_app_folder=(
 	hammerspoon 		# powerful macOS automation tool
@@ -11,8 +12,11 @@ non_app_store_applications_to_app_folder=(
 	brave-browser@beta 	# browser
 	kicad			# design schematics and pcb boards
 	menumeters		# displays computer stats (ram usage, cpu temp)
+	audacity		# audio editior
 )
 
+
+# brew install 
 # non app store application to not application folder
 non_app_store_applications=(
 	arduino-cli		# command line interface for arduino ide
@@ -38,6 +42,7 @@ app_store_applications=(
 
 # mas can only download app store applications you've downloaded before with your icloud account
 mas install ${app_store_applications[@]} # installing mac app store applications
+
 
 # shell env
 cp init.lua ~/.hammerspoon/init.lua
