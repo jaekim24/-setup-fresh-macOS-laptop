@@ -28,6 +28,9 @@ non_app_store_applications=(
 	parallel		# bash parallel processing
 )
 
+# To resolve issues related to Python environments being externally managed, because of homebrew installed python version, execute below commmand.
+rm ./Frameworks/Python.framework/Versions/3.12/lib/python3.12/EXTERNALLY-MANAGED
+
 
 softwareupdate --install-rosetta # need this to run ardunio-cli on apple silicon 
 brew install --cask --appdir "/Applications" ${non_app_store_applications_to_app_folder[@]}
