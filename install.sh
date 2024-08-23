@@ -24,6 +24,8 @@ non_app_store_applications=(
 	bclm			# battery control level managment
 	mas			# cli for mac app store
 	notion			# note taking app
+	ffmpeg			# everything about editing video, audio,and images
+	parallel		# bash parallel processing
 )
 
 
@@ -42,6 +44,12 @@ app_store_applications=(
 
 # mas can only download app store applications you've downloaded before with your icloud account
 mas install ${app_store_applications[@]} # installing mac app store applications
+
+pip3_libraries=(
+	trimmer		# downloads and trimms youtube url to mp3 
+)
+
+pip3 install ${pip3_libraries[@]}
 
 
 # shell env

@@ -13,7 +13,9 @@ function c(){
 
 # find a file in all directory
 function findf(){
-	find / -iname "$1" 2>/dev/null
+	#find / -iname "$1" 2>/dev/null
+	find / -type d -print0 2>/dev/null | parallel -0 -j+0 "find {} -maxdepth 1 -type f -iname \"$1\" 2>/dev/null"
+
 }
 
 # find a folder in all diretories
@@ -40,3 +42,7 @@ function gitsave(){
 }
 
 export PATH=/opt/homebrew/bin:$PATH
+export PATH=/opt/homebrew/sbin:$PATH
+export PATH="/opt/homebrew/opt/python/libexec/bin:$PATH"
+
+
