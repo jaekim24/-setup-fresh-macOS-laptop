@@ -19,6 +19,7 @@ non_app_store_applications=(
 	python
 	bclm			# battery control level managment
 	mas			# cli for mac app store
+	notion			# note taking app
 )
 
 
@@ -29,7 +30,10 @@ brew install ${non_app_store_applications[@]}
 
 # app store applications
 app_store_applications=(
-	869223134 # kakao
+	869223134 	# kakao
+	1484801884	# pomodoro timer
+	1044549675	# media player
+
 )
 
 mas install ${app_store_applications[@]} # installing mac app store applications
