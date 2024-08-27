@@ -57,6 +57,110 @@ hs.hotkey.bind(mash1 , 'f', function () hs.application.launchOrFocus("Finder") e
 
 
 
+-- Function to increase window size
+function increaseWindowSize()
+    local win = hs.window.focusedWindow()
+    local f = win:frame()
+    local screen = win:screen()
+    local max = screen:frame()
+    
+    local horizontalIncrease = max.w * 0.1
+    local verticalIncrease = max.h * 0.1
+
+    -- Check horizontal position
+    if f.x == max.x and f.w <= max.w / 2 then
+        -- Left half: Increase width to the right
+        f.w = math.min(f.w + horizontalIncrease, max.w)
+    elseif f.x >= max.x + (max.w / 2) then
+        -- Right half: Increase width to the left
+        local newWidth = math.min(f.w + horizontalIncrease, max.w)
+        f.x = max.x + max.w - newWidth
+        f.w = newWidth
+    else
+        -- Middle: Increase both sides
+        local hIncrease = horizontalIncrease / 2
+        f.x = math.max(f.x - hIncrease, max.x)
+        f.w = math.min(f.w + hIncrease * 2, max.w)
+    end
+
+    -- Check vertical position
+    if f.y == max.y and f.h <= max.h / 2 then
+        -- Top half: Increase height downwards
+        f.h = math.min(f.h + verticalIncrease, max.h)
+    elseif f.y >= max.y + (max.h / 2) then
+        -- Bottom half: Increase height upwards
+        local newHeight = math.min(f.h + verticalIncrease, max.h)
+        f.y = max.y + max.h - newHeight
+        f.h = newHeight
+    else
+        -- Middle: Increase both directions
+        local vIncrease = verticalIncrease / 2
+        f.y = math.max(f.y - vIncrease, max.y)
+        f.h = math.min(f.h + vIncrease * 2, max.h)
+    end
+    
+    win:setFrame(f)
+end
+
+
+-- this doesnt work correctly 
+-- Function to decrease window size
+function decreaseWindowSize()
+    local win = hs.window.focusedWindow()
+    local f = win:frame()
+    local screen = win:screen()
+    local max = screen:frame()
+
+    local horizontalDecrease = max.w * 0.1
+    local verticalDecrease = max.h * 0.1
+    local minWidth = max.w * 0.25  -- Minimum width: 25% of screen width
+    local minHeight = max.h * 0.25 -- Minimum height: 25% of screen height
+
+    -- Check horizontal position
+    if f.x == max.x and f.w <= max.w / 2 then
+        -- Left half: Decrease width from the right
+        f.w = math.max(f.w - horizontalDecrease, minWidth)
+    elseif f.x >= max.x + (max.w / 2) then
+        -- Right half: Decrease width from the left
+        local newWidth = math.max(f.w - horizontalDecrease, minWidth)
+        f.x = max.x + max.w - newWidth
+        f.w = newWidth
+    else
+        -- Middle: Decrease from both sides
+        local hDecrease = horizontalDecrease / 2
+        f.x = math.min(f.x + hDecrease, max.x + max.w - minWidth)
+        f.w = math.max(f.w - hDecrease * 2, minWidth)
+    end
+
+    -- Check vertical position
+    if f.y == max.y and f.h <= max.h / 2 then
+        -- Top half: Decrease height from the bottom
+        f.h = math.max(f.h - verticalDecrease, minHeight)
+    elseif f.y >= max.y + (max.h / 2) then
+        -- Bottom half: Decrease height from the top
+        local newHeight = math.max(f.h - verticalDecrease, minHeight)
+        f.y = max.y + max.h - newHeight
+        f.h = newHeight
+    else
+        -- Middle: Decrease from both directions
+        local vDecrease = verticalDecrease / 2
+        f.y = math.min(f.y + vDecrease, max.y + max.h - minHeight)
+        f.h = math.max(f.h - vDecrease * 2, minHeight)
+    end
+
+    win:setFrame(f)
+end
+
+
+-- Bind the function to a hotkey (Command + Shift + -)
+hs.hotkey.bind(mash1, 'j', decreaseWindowSize)
+hs.hotkey.bind(mash1, 'k', increaseWindowSize)
+
+
+
+
+
+
 ----------------------------------
 ---- last window quit program ----
 ----------------------------------
