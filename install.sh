@@ -3,6 +3,9 @@
 # homebrew
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
+# only shows active apps on  
+defaults write com.apple.dock static-only -bool TRUE; killall Dock
+
 
 # brew install --cask --appdir "/Applications"
 # non app store applications to application folder
@@ -26,6 +29,9 @@ non_app_store_applications=(
 	notion			# note taking app
 	ffmpeg			# everything about editing video, audio,and images
 	parallel		# bash parallel processing
+	qt			# need for labelImg
+	libxml2  		# need for labelImg				
+	ultralytics		# yolov8 model
 )
 
 # To resolve issues related to Python environments being externally managed, because of homebrew installed python version, execute below commmand.
