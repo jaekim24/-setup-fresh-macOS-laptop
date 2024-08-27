@@ -56,6 +56,7 @@ hs.hotkey.bind(mash1 , 'f', function () hs.application.launchOrFocus("Finder") e
 
 
 
+
 ----------------------------------
 ---- last window quit program ----
 ----------------------------------
@@ -63,13 +64,15 @@ hs.hotkey.bind(mash1 , 'f', function () hs.application.launchOrFocus("Finder") e
 -- Initialize the watcher and menubar
 local windowWatcher = nil
 local menubar = nil
+local isEnabled = true
+
 
 -- List of apps to exclude from auto-quitting
 local excludedApps = {
     "Hammerspoon",
     "Spotlight",
-    "Finder"  -- It's generally a good idea to exclude Finder as well
-}
+    "Finder"  
+    }
 
 -- Function to check if an app should be excluded
 local function isExcluded(appName)
@@ -83,6 +86,7 @@ end
 
 -- Function to check and quit the application if the last window is closed
 local function checkAndQuitApp(window)
+    if not isEnabled then return end 
     local app = window:application()
     if not app then return end
 
@@ -113,6 +117,15 @@ local function startWatcher()
     windowWatcher:subscribe(hs.window.filter.windowDestroyed, checkAndQuitApp)
 end
 
+
+-- Function to stop the watcher
+local function stopWatcher()
+    if windowWatcher then
+        windowWatcher = nil
+    end
+end
+
+
 -- Function to create menu
 local function createMenu()
     local menuItems = {
@@ -142,9 +155,13 @@ local function toggleMenubar()
     if menubar then
         menubar:delete()
         menubar = nil
+	stopWatcher()
+	isEnabled = false
         hs.alert.show("Last Window Quit menubar removed")
     else
         createMenu()
+	startWatcher()    
+	isEnabled = true
         hs.alert.show("Last Window Quit menubar restored")
     end
 end

@@ -6,6 +6,9 @@
 # only shows active apps on  
 defaults write com.apple.dock static-only -bool TRUE; killall Dock
 
+# to reset dock to default
+#defaults delete com.apple.dock; killall Dock
+
 
 # brew install --cask --appdir "/Applications"
 # non app store applications to application folder
