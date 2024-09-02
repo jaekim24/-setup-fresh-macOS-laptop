@@ -44,7 +44,7 @@ hs.hotkey.bind(mash, 'l', function() hs.window.focusedWindow():move(units.right5
 hs.hotkey.bind(mash, 'u', function() hs.window.focusedWindow():move(units.topLeft,    nil, true) end)
 hs.hotkey.bind(mash, 'i', function() hs.window.focusedWindow():move(units.topRight,    nil, true) end)
 hs.hotkey.bind(mash, 'n', function() hs.window.focusedWindow():move(units.botLeft,    nil, true) end)
-hs.hotkey.bind(mash, ',', function() hs.window.focusedWindow():move(units.botRight,    nil, true) end)
+hs.hotkey.bind(mash, 'm', function() hs.window.focusedWindow():move(units.botRight,    nil, true) end)
 hs.hotkey.bind(mash, 'f', function() hs.window.focusedWindow():move(units.maximum,    nil, true) end)
 
 -- keybinds to applications

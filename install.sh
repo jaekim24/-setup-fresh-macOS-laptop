@@ -35,6 +35,7 @@ non_app_store_applications=(
 	qt			# need for labelImg
 	libxml2  		# need for labelImg				
 	ultralytics		# yolov8 model
+	shortca			# click with your keyboardt
 )
 
 # To resolve issues related to Python environments being externally managed, because of homebrew installed python version, execute below commmand.
