@@ -20,6 +20,7 @@ non_app_store_applications_to_app_folder=(
 	menumeters		# displays computer stats (ram usage, cpu temp)
 	audacity		# audio editior
 	anki 
+	discord
 )
 
 
