@@ -19,6 +19,7 @@ non_app_store_applications_to_app_folder=(
 	kicad			# design schematics and pcb boards
 	menumeters		# displays computer stats (ram usage, cpu temp)
 	audacity		# audio editior
+	anki 
 )
 
 
@@ -35,8 +36,9 @@ non_app_store_applications=(
 	qt			# need for labelImg
 	libxml2  		# need for labelImg				
 	ultralytics		# yolov8 model
-	shortca			# click with your keyboardt
+	shortcat		# click with your keyboard
 )
+
 
 # To resolve issues related to Python environments being externally managed, because of homebrew installed python version, execute below commmand.
 rm ./Frameworks/Python.framework/Versions/3.12/lib/python3.12/EXTERNALLY-MANAGED
