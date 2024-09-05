@@ -9,6 +9,14 @@ defaults write com.apple.dock static-only -bool TRUE; killall Dock
 # to reset dock to default
 #defaults delete com.apple.dock; killall Dock
 
+# install xcode
+xcode-select --install
+
+# installing open spotify so it works with blockthespot-mac
+mv spotify/Spotify.app /Applications/Spotify.app
+
+# install blockthespot-mac github repo
+bash <(curl -sSL https://raw.githubusercontent.com/Nuzair46/BlockTheSpot-Mac/main/install.sh) -u
 
 # brew install --cask --appdir "/Applications"
 # non app store applications to application folder
@@ -21,6 +29,7 @@ non_app_store_applications_to_app_folder=(
 	audacity		# audio editior
 	anki 
 	discord
+	spotify
 )
 
 
