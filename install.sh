@@ -13,6 +13,7 @@ defaults write com.apple.dock static-only -bool TRUE; killall Dock
 xcode-select --install
 
 # installing open spotify so it works with blockthespot-mac
+# https://github.com/Nuzair46/BlockTheSpot-Mac
 mv spotify/Spotify.app /Applications/Spotify.app
 
 # install blockthespot-mac github repo
