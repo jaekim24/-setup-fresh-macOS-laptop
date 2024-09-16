@@ -48,6 +48,7 @@ non_app_store_applications=(
 	libxml2  		# need for labelImg				
 	ultralytics		# yolov8 model
 	shortcat		# click with your keyboard
+	ranger
 )
 
 
